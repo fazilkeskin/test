@@ -44,6 +44,12 @@ export const EVRAK_TURU_ETIKETLERI = {
   diger: 'Diğer',
 };
 
+export const TEKLIF_DURUM_ETIKETLERI = {
+  beklemede: 'Beklemede',
+  secildi: 'Seçildi (En Avantajlı)',
+  elendi: 'Elendi',
+};
+
 export const BIRIMLER = [
   'adet', 'kg', 'gr', 'ton', 'lt', 'metre', 'm²', 'm³',
   'paket', 'kutu', 'koli', 'rulo', 'takım', 'çift', 'saat', 'gün', 'ay', 'hizmet',

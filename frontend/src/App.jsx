@@ -5,12 +5,15 @@ import Giris from './sayfalar/Giris.jsx';
 import Dosyalar from './sayfalar/Dosyalar.jsx';
 import DosyaDetay from './sayfalar/DosyaDetay.jsx';
 import Kullanicilar from './sayfalar/Kullanicilar.jsx';
+import Firmalar from './sayfalar/Firmalar.jsx';
 import ParolaDegistir from './sayfalar/ParolaDegistir.jsx';
 
-function Korumali({ children, sadeceYonetici = false }) {
+function Korumali({ children, roller }) {
   const { kullanici } = useAuth();
   if (!kullanici) return <Navigate to="/giris" replace />;
-  if (sadeceYonetici && kullanici.rol !== 'yonetici') return <Navigate to="/" replace />;
+  if (roller && kullanici.rol !== 'yonetici' && !roller.includes(kullanici.rol)) {
+    return <Navigate to="/" replace />;
+  }
   return children;
 }
 
@@ -24,6 +27,9 @@ function UstMenu() {
         <span className="logo">Satın Alma Takip</span>
         <nav>
           <NavLink to="/">Alım Dosyaları</NavLink>
+          {['yonetici', 'satinalma'].includes(kullanici.rol) && (
+            <NavLink to="/firmalar">Firmalar</NavLink>
+          )}
           {kullanici.rol === 'yonetici' && <NavLink to="/kullanicilar">Kullanıcılar</NavLink>}
         </nav>
         <div className="kullanici-alani">
@@ -70,9 +76,17 @@ export default function App() {
             }
           />
           <Route
+            path="/firmalar"
+            element={
+              <Korumali roller={['satinalma']}>
+                <Firmalar />
+              </Korumali>
+            }
+          />
+          <Route
             path="/kullanicilar"
             element={
-              <Korumali sadeceYonetici>
+              <Korumali roller={[]}>
                 <Kullanicilar />
               </Korumali>
             }

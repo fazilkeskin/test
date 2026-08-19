@@ -58,7 +58,7 @@ npm run dev                 # http://localhost:5173
 
 - [x] **Aşama 1:** Proje iskeleti, kimlik doğrulama, rol tabanlı kullanıcı yönetimi, yönetim paneli, alım dosyası oluşturma ve kullanıcı atama
 - [x] **Aşama 2:** İhtiyaç listesi kalemleri ve teknik şartname/evrak yönetimi (yükleme/indirme)
-- [ ] **Aşama 3:** Teklif toplama, karşılaştırma ve sipariş
+- [x] **Aşama 3:** Firma kartları, teklif toplama/karşılaştırma, en avantajlı teklif seçimi ve sipariş
 - [ ] **Aşama 4:** Muayene kabul işlemleri
 - [ ] **Aşama 5:** Sarf/demirbaş kayıtları ve muhasebeleştirme
 - [ ] **Aşama 6:** Raporlama ve dosya arşivi

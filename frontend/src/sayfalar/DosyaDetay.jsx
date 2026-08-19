@@ -4,6 +4,7 @@ import { api, hataMesaji } from '../api.js';
 import { useAuth } from '../AuthContext.jsx';
 import KalemListesi from '../bilesenler/KalemListesi.jsx';
 import EvrakListesi from '../bilesenler/EvrakListesi.jsx';
+import TeklifBolumu from '../bilesenler/TeklifBolumu.jsx';
 import {
   DURUM_ETIKETLERI,
   DURUM_SIRASI,
@@ -138,6 +139,7 @@ export default function DosyaDetay() {
 
       <KalemListesi dosyaId={id} />
       <EvrakListesi dosyaId={id} />
+      <TeklifBolumu dosyaId={id} dosyaYenile={yukle} />
 
       <div className="kart">
         <h2>Atanan Kullanıcılar</h2>

@@ -4,6 +4,7 @@ import { config } from './config.js';
 import authRouter from './routes/auth.js';
 import kullanicilarRouter from './routes/kullanicilar.js';
 import dosyalarRouter from './routes/dosyalar.js';
+import firmalarRouter from './routes/firmalar.js';
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.get('/api/saglik', (req, res) => res.json({ durum: 'calisiyor' }));
 app.use('/api/auth', authRouter);
 app.use('/api/kullanicilar', kullanicilarRouter);
 app.use('/api/dosyalar', dosyalarRouter);
+app.use('/api/firmalar', firmalarRouter);
 
 app.use((req, res) => res.status(404).json({ hata: 'Kayıt bulunamadı.' }));
 
