@@ -2,10 +2,16 @@ import { Router } from 'express';
 import { DURUMLAR } from '../config.js';
 import { query } from '../db.js';
 import { authRequired, rolGerekli, dosyaErisimi } from '../middleware/auth.js';
+import kalemlerRouter from './kalemler.js';
+import evraklarRouter from './evraklar.js';
 
 const router = Router();
 
 router.use(authRequired);
+
+// Alt kaynaklar: erişim kontrolü dosyaErisimi ile yapılır
+router.use('/:id/kalemler', dosyaErisimi, kalemlerRouter);
+router.use('/:id/evraklar', dosyaErisimi, evraklarRouter);
 
 async function hareketEkle(dosyaId, kullaniciId, islem, aciklama) {
   await query(

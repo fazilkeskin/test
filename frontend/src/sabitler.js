@@ -30,6 +30,25 @@ export const DURUM_SIRASI = [
   'tamamlandi',
 ];
 
+export const EVRAK_TURU_ETIKETLERI = {
+  ihtiyac_listesi: 'İhtiyaç Listesi',
+  teknik_sartname: 'Teknik Şartname',
+  yaklasik_maliyet: 'Yaklaşık Maliyet Cetveli',
+  onay_belgesi: 'Onay Belgesi',
+  teklif_mektubu: 'Teklif Mektubu',
+  piyasa_arastirma_tutanagi: 'Piyasa Araştırma Tutanağı',
+  siparis_mektubu: 'Sipariş Mektubu',
+  muayene_kabul_tutanagi: 'Muayene Kabul Tutanağı',
+  tasinir_islem_fisi: 'Taşınır İşlem Fişi',
+  fatura: 'Fatura',
+  diger: 'Diğer',
+};
+
+export const BIRIMLER = [
+  'adet', 'kg', 'gr', 'ton', 'lt', 'metre', 'm²', 'm³',
+  'paket', 'kutu', 'koli', 'rulo', 'takım', 'çift', 'saat', 'gün', 'ay', 'hizmet',
+];
+
 export const tarihFormatla = (t) =>
   t ? new Date(t).toLocaleString('tr-TR', { dateStyle: 'short', timeStyle: 'short' }) : '-';
 

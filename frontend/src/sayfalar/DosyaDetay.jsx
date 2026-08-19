@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { api, hataMesaji } from '../api.js';
 import { useAuth } from '../AuthContext.jsx';
+import KalemListesi from '../bilesenler/KalemListesi.jsx';
+import EvrakListesi from '../bilesenler/EvrakListesi.jsx';
 import {
   DURUM_ETIKETLERI,
   DURUM_SIRASI,
@@ -133,6 +135,9 @@ export default function DosyaDetay() {
           </div>
         )}
       </div>
+
+      <KalemListesi dosyaId={id} />
+      <EvrakListesi dosyaId={id} />
 
       <div className="kart">
         <h2>Atanan Kullanıcılar</h2>

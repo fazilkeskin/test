@@ -57,7 +57,7 @@ npm run dev                 # http://localhost:5173
 ## Geliştirme Aşamaları
 
 - [x] **Aşama 1:** Proje iskeleti, kimlik doğrulama, rol tabanlı kullanıcı yönetimi, yönetim paneli, alım dosyası oluşturma ve kullanıcı atama
-- [ ] **Aşama 2:** İhtiyaç listesi kalemleri ve teknik şartname/evrak yönetimi
+- [x] **Aşama 2:** İhtiyaç listesi kalemleri ve teknik şartname/evrak yönetimi (yükleme/indirme)
 - [ ] **Aşama 3:** Teklif toplama, karşılaştırma ve sipariş
 - [ ] **Aşama 4:** Muayene kabul işlemleri
 - [ ] **Aşama 5:** Sarf/demirbaş kayıtları ve muhasebeleştirme

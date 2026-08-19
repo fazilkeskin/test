@@ -288,6 +288,33 @@ textarea:focus {
   font-style: italic;
 }
 
+.kart-baslik {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.kart-baslik h2 {
+  margin: 0;
+}
+
+.ic-form {
+  background: #f8fafc;
+  border: 1px dashed var(--cizgi);
+  border-radius: 8px;
+  padding: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.kisitli-metin {
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .bilgi-izgara {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
